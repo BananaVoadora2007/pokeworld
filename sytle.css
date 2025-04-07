@@ -1,4 +1,4 @@
-sytle.css
+style.css
 :root {
     --primary-color: #ff0000;
     --secondary-color: #3b4cca;
@@ -36,11 +36,8 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../img/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    opacity: 0.1;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    opacity: 0.3;
     z-index: -1;
 }
 
@@ -114,11 +111,6 @@ header {
     background: rgba(255, 255, 255, 0.3);
 }
 
-.accessibility-btn img {
-    width: 16px;
-    height: 16px;
-}
-
 /* Navegação */
 nav {
     background-color: var(--secondary-color);
@@ -162,66 +154,6 @@ main {
     padding: 0 20px;
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--text-light);
-    padding: 3rem 2rem;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../img/pokeballs.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
-    opacity: 0.1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.btn {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: var(--text-color);
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
 /* Seção de Pokémons em Destaque */
 .featured-pokemon {
     margin-bottom: 3rem;
@@ -255,12 +187,14 @@ main {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.pokemon-card img {
+.pokemon-image {
     width: 100%;
     height: 200px;
-    object-fit: contain;
-    background-color: #f0f0f0;
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: white;
 }
 
 .pokemon-card .info {
@@ -276,55 +210,6 @@ main {
 
 .pokemon-card p {
     margin: 0.5rem 0;
-}
-
-/* Seção de Notícias */
-.news {
-    margin-bottom: 3rem;
-}
-
-.news h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color: var(--primary-color);
-}
-
-.news-card {
-    display: flex;
-    background-color: var(--card-bg);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
-}
-
-.news-card img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-
-.news-content {
-    padding: 1.5rem;
-    flex: 1;
-}
-
-.news-content h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.read-more {
-    display: inline-block;
-    margin-top: 1rem;
-    color: var(--secondary-color);
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.read-more:hover {
-    text-decoration: underline;
 }
 
 /* Rodapé */
@@ -374,14 +259,9 @@ footer {
     gap: 1rem;
 }
 
-.social-icons a img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.2s;
-}
-
-.social-icons a:hover img {
-    transform: scale(1.1);
+.social-icons a {
+    color: var(--text-light);
+    font-size: 1.5rem;
 }
 
 .footer-bottom {
@@ -443,27 +323,14 @@ footer {
         margin-top: 1rem;
     }
     
-    .hero h2 {
-        font-size: 2rem;
-    }
-    
-    .news-card {
-        flex-direction: column;
-    }
-    
-    .news-card img {
-        width: 100%;
-        height: 150px;
+    .pokemon-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 }
 
 @media (max-width: 480px) {
     :root {
         --font-size: 14px;
-    }
-    
-    .hero h2 {
-        font-size: 1.8rem;
     }
     
     .pokemon-grid {

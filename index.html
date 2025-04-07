@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéWorld - O Universo Pokémon</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/pokeball.ico" type="image/x-icon">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <header>
+        <div class="header-container">
+            <h1><img src="img/logo.png" alt="PokéWorld" class="logo"></h1>
+            <p>O Universo Pokémon em um só lugar!</p>
+        </div>
+        
+        <div class="accessibility-panel">
+            <button class="accessibility-btn" id="contrast-btn" aria-label="Alto contraste">
+                <img src="img/contrast.png" alt="" aria-hidden="true"> Alto Contraste
+            </button>
+            <button class="accessibility-btn" id="dark-btn" aria-label="Modo escuro">
+                <img src="img/dark-mode.png" alt="" aria-hidden="true"> Modo Escuro
+            </button>
+            <button class="accessibility-btn" id="font-increase" aria-label="Aumentar fonte">A+</button>
+            <button class="accessibility-btn" id="font-decrease" aria-label="Diminuir fonte">A-</button>
+            <button class="accessibility-btn" id="read-page" aria-label="Ler página">
+                <img src="img/audio.png" alt="" aria-hidden="true"> Ler
+            </button>
+        </div>
+    </header>
+    
+    <nav aria-label="Navegação principal">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="pokedex.html">Pokédex</a></li>
+            <li><a href="tipos.html">Tipos Pokémon</a></li>
+            <li><a href="jogos.html">Jogos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <main id="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Bem-vindo ao Mundo Pokémon!</h2>
+                <p>Explore todas as criaturas incríveis, tipos, habilidades e muito mais.</p>
+                <a href="pokedex.html" class="btn">Explorar Pokédex</a>
+            </div>
+        </section>
+        
+        <section class="featured-pokemon">
+            <h2>Pokémons em Destaque</h2>
+            <div class="pokemon-grid">
+                <!-- Os cards serão preenchidos pelo JavaScript -->
+            </div>
+        </section>
+        
+        <section class="news">
+            <h2>Últimas Notícias</h2>
+            <article class="news-card">
+                <img src="img/news1.jpg" alt="Novo jogo Pokémon anunciado">
+                <div class="news-content">
+                    <h3>Novo jogo Pokémon Scarlet e Violet</h3>
+                    <p>A Game Freak anunciou a nova geração de jogos Pokémon para Nintendo Switch, com lançamento previsto para novembro de 2023.</p>
+                    <a href="#" class="read-more">Leia mais</a>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <img src="img/news2.jpg" alt="Campeonato Mundial Pokémon">
+                <div class="news-content">
+                    <h3>Campeonato Mundial 2023</h3>
+                    <p>O torneio mundial deste ano acontecerá em Yokohama, Japão, com os melhores treinadores competindo pelo título.</p>
+                    <a href="#" class="read-more">Leia mais</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre</h3>
+                <p>PokéWorld é um site feito por fãs para fãs de Pokémon. Não somos afiliados à Nintendo ou The Pokémon Company.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pokedex.html">Pokédex</a></li>
+                    <li><a href="tipos.html">Tipos</a></li>
+                    <li><a href="jogos.html">Jogos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><img src="img/facebook.png" alt=""></a>
+                    <a href="#" aria-label="Twitter"><img src="img/twitter.png" alt=""></a>
+                    <a href="#" aria-label="Instagram"><img src="img/instagram.png" alt=""></a>
+                    <a href="#" aria-label="YouTube"><img src="img/youtube.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 PokéWorld. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
